@@ -35,7 +35,7 @@ public class Job implements Runnable {
 
             int length = input.read();
             byte[] bytes = new byte[length];
-            input.readFully(bytes, 0, length); //input.read(bytes);确实取不到完整的字符串
+            input.readFully(bytes, 0, length); //input.read(length);确实取不到完整的字符串
             String user = new String(bytes,encoding).trim();
             int pwd = input.read();
 
